@@ -27,9 +27,28 @@
 
 <body>
 
-    <main>
-      
-        
+    <main id="app">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 text-center p-5">
+                    <h1>Testo "stampato" dal data di Vue:</h1>
+                    <h1>{{message}}</h1>
+
+                    <h1 class="mt-5">Immagine "stampata" dal data di Vue:</h1>
+                    <img :src="immagine" alt="" class="img-fluid">
+                </div>
+                <div class="col-6 text-center p-5">
+                    <h1>Inserisci del testo per modificare dinamicamente quello creato:</h1>
+                    <input type="text" v-model="message" @click="pulisciTesto()">
+                    
+                    <h1 class="mt-5">Inserisci un URL di un immagine per modificare dinamicamente quello creato:</h1>
+                    <input type="text" v-model="immagine" @click="pulisciImmagine()">
+
+                </div>
+            </div>
+        </div>
+
+
     </main>
 
     <script src="js/script.js"></script>
